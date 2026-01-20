@@ -4,19 +4,42 @@ import Project from "./component/project";
 import Experience from "./component/experience";
 import Education from "./component/education";
 import Skill from "./component/skill";
-import Footer from "./component/footer";  
-
+import Footer from "./component/footer";
 
 function App() {
   return (
-    <div>
+    <div className="bg-[#1a1a1a]">
       <Navbar />
-      <Hero />
-      <Skill />
-      <Project />
-      <Experience />
-      <Education />
-      <Footer /> 
+      
+      {/* Hero Section */}
+      <section id="home">
+        <Hero />
+      </section>
+
+      {/* Skills Section */}
+      <section id="skills">
+        <Skill />
+      </section>
+
+      {/* Projects Section */}
+      <section id="projects">
+        <Project />
+      </section>
+
+      {/* Experience Section */}
+      <section id="experience">
+        <Experience />
+      </section>
+
+      {/* Education Section */}
+      <section id="education">
+        <Education />
+      </section>
+
+      {/* Contact Section (Footer acts as contact) */}
+      <section id="contact">
+        <Footer />
+      </section>
     </div>
   );
 }
