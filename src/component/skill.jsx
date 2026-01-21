@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNetworkWired } from 'react-icons/fa';
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNetworkWired, FaGithub, FaGitAlt } from 'react-icons/fa';
 import { SiGreensock } from 'react-icons/si';
 
 export default function Skill() {
@@ -26,6 +26,13 @@ export default function Skill() {
       skills: [
         { name: "Networking Fundamentals", icon: <FaNetworkWired />, color: "#0f2147" },
         { name: "Computer Networks", icon: <FaNetworkWired />, color: "#1a3a6b" }
+      ]
+    },
+    {
+      title: "Version Control & Tools",
+      skills: [
+        { name: "GitHub", icon: <FaGithub />, color: "#f5f3f0" },
+        { name: "Git", icon: <FaGitAlt />, color: "#F05032" }
       ]
     }
   ];
@@ -121,8 +128,8 @@ export default function Skill() {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ 
-                duration: 0.6, 
+              transition={{
+                duration: 0.6,
                 delay: categoryIndex * 0.2,
                 ease: [0.22, 1, 0.36, 1]
               }}
@@ -130,7 +137,7 @@ export default function Skill() {
               <h3 className="text-2xl md:text-3xl font-bold text-[#f5f3f0] mb-8 text-center md:text-left">
                 {category.title}
               </h3>
-              
+
               <motion.div
                 variants={containerVariants}
                 initial="hidden"
@@ -142,14 +149,14 @@ export default function Skill() {
                   <motion.div
                     key={skill.name}
                     variants={skillVariants}
-                    whileHover={{ 
+                    whileHover={{
                       y: -12,
                       scale: 1.05
                     }}
-                    transition={{ 
-                      type: "spring", 
-                      stiffness: 300, 
-                      damping: 20 
+                    transition={{
+                      type: "spring",
+                      stiffness: 300,
+                      damping: 20
                     }}
                     className="relative group"
                   >
@@ -178,7 +185,7 @@ export default function Skill() {
                         >
                           {skill.icon}
                         </motion.div>
-                        
+
                         {/* Glow ring */}
                         <motion.div
                           className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
@@ -201,8 +208,8 @@ export default function Skill() {
                         initial={{ width: 0 }}
                         whileInView={{ width: '60%' }}
                         viewport={{ once: true }}
-                        transition={{ 
-                          duration: 0.8, 
+                        transition={{
+                          duration: 0.8,
                           delay: skillIndex * 0.1,
                           ease: [0.22, 1, 0.36, 1]
                         }}

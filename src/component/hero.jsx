@@ -219,20 +219,7 @@ export default function Hero() {
                 transition={{ delay: 0.5, duration: 0.8 }}
               />
 
-              {/* Rotating border */}
-              <motion.div
-                animate={{ rotate: 360 }}
-                transition={{
-                  duration: 25,
-                  repeat: Infinity,
-                  ease: "linear"
-                }}
-                className="absolute -inset-4 rounded-full"
-                style={{
-                  background: "conic-gradient(from 0deg, transparent 0deg, #0f2147 60deg, transparent 120deg)",
-                  opacity: 0.3
-                }}
-              />
+             
 
               {/* Floating particles */}
               {[...Array(3)].map((_, i) => (
